@@ -1,29 +1,377 @@
+<!-- Unit 5 Project
+Requirements
+[  ] <div> and <span>
+[  ] border:, margin:, and padding: 
+[  ] Three Images
+
+Select TWO Additional Features to Add  
+[ no ] Feature 1 - Flexbox
+[ no ] Feature 2 - Flip Card
+[ no ] Feature 3 - Animation
+[ no ] Feature 4 - Linear Gradient
+[ no ] Feature 5 - Use a .Gif
+[ no ] Feature 6 - Unique Border Styles
+-->
+
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Challenge: The overflowing ocean</title>
-        <style>
-            .info {
-                background: rgb(219, 235, 255);
-            }
-        </style>
-    </head>
-    <body>
-    
-        <h1>The ocean</h1>
-        
-        <img class="pic" src="https://www.kasandbox.org/programming-images/landscapes/beach-in-hawaii.png" alt="Photo of rocky ocean beach in Hawaii">
-        
-        <div class="info">
-            <p>The <strong>ocean</strong> is the connected body of salty water that covers 70.8% of the Earth's surface. The sea moderates the Earth's climate and has important roles in the water cycle, carbon cycle, and nitrogen cycle. Although the sea has been travelled and explored since prehistory, the modern scientific study of the sea—oceanography—dates broadly to the British Challenger expedition of the 1870s. The sea is conventionally divided into four or five large sections, such as the Pacific, called oceans while smaller sections, such as the Mediterranean, are known as seas.
-            </p>
-            <p>
-    Owing to the present state of continental drift, the Northern Hemisphere is now fairly equally divided between land and sea (a ratio of about 2:3) but the South is overwhelmingly oceanic (1:4.7). Salinity in the open ocean is generally in a narrow band around 3.5% by mass, although this can vary in more landlocked waters, near the mouths of large rivers, or at great depths. About 85% of the solids in the open sea are sodium and chloride. Deep-sea currents are produced by differences in salinity and temperature. Surface currents are formed by the friction of waves produced by the wind and by tides, the changes in local sea level produced by the gravity of the Moon and Sun. The direction of all of these is governed by surface and submarine land masses and by the rotation of the Earth (the Coriolis effect).
-            </p>
-            
-            <a href="http://en.wikipedia.org/wiki/Sea">Read more on Wikipedia</a>
-        </div>
-        
-    </body>
+
+<head>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+  <title>Benny F project</title>
+  <meta charset="utf-8">
+  <style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(255, 8, 0); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(44, 35, 230); }
+}
+
+
+
+h2{
+  
+  
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:rgb(210, 70, 70)
+
+
+}
+
+
+h1{ 
+  
+  
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:rgb(210, 70, 70)
+}
+
+
+
+p{
+  
+  
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:rgb(210, 70, 70)
+  
+  
+
+}
+
+
+    #photo {
+      width: 700px;
+      margin: 20px;
+      border: 5px solid rgb(6, 2, 255);
+      padding: 5px;
+
+
+
+    }
+
+
+body{
+  background-image: url(https://i.pinimg.com/originals/dd/7f/e2/dd7fe2bebc1e730a18fbdb4860dd6f68.gif);
+/* background-size: cover; */
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+
+
+
+cursor:url() 16 0,auto; /*!emojicursor.app*/
+
+}
+
+
+ .flip-card {
+  background-color: transparent;
+  width: 600px;
+  height: 600px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 5s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(4140deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+
+.flip-card-front {
+  background-color: #9e3e3e;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #fff1f1;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+ul{
+
+
+ font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:rgb(210, 70, 70)
+  
+  
+
+
+}
+
+
+
+
+
+#card1{
+
+width: 590px;
+height: 590px;
+ 
+      margin: -5px;
+      border: 5px solid rgb(255, 3, 3);
+      padding: 5px;
+
+}
+
+.flip-card p.backtext{
+  font-size: 70%;
+
+
+
+
+
+
+
+
+}
+
+
+.div1{display: flex;}
+
+
+
+
+  </style>
+</head>
+<body>
+<center>
+ <h1 class="typewriter">BENJAMIN FRANKLIN</h1>
+<h2 class="typewriter">Krishna Venkatesh</h2>
+<p><img id="photo" src="https://www.mickmel.com/wp-content/uploads/2024/07/benjamin-franklin-7665508_1280.png"><br> A lot of people reading this may ask...Why Benjamin Franklin? He's already so well known! While one could think this to be true, I've always found myself deeply fascinated by Benjamin Franklin. You see, early "America" was greatly religous. Religion is deeply inscribed in American History, with concepts like manifest destiny circulating all around. However, Benjamin Franklin is different from a lot of the other founding fathers, in that, he was a man of science....kinda. You see, Benjamin Franklin had a puritan upbringing, but simaltaenously, he fully accepted the enlightenment, being utterly fascinated with science, innovation, and human invention. He was a diest. He had a strong feeling that some, distant creator did indeed exist, yet at no point did "they" intervene in human history. It's hard to come across similar ideologies in the other founding fathers, especially one whom expresses this as openly as Benjamin Franklin did, in a time of many pious Christians. 
+
+<br><br><h2>AWESOME FACTS</h2>
+
+<div class="div1">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img id="card1" src=https://www.ushistory.org/franklin/images/francis_folger_franklin.jpg>
+    </div>
+    <div class="flip-card-back">
+      
+      <p class="backtext">Childhood</p>
+      <p>Benjamin Franklin was born in Boston, Massachusetts, on January 17th, and he had 17 siblings in total. His dad was an artisan soap maker, a really undesirable artisan craft at that time, and in turn, they weren't notably wealthy by any means. He picked up reading in school, almost instantaenously, but showed little regard for math or arithemtic. Benjamin absolutely loved school, and learning as a whole. However, at age 10, his father could no longer afford Benjamin's education, and he had to stop his formal education. About 2 years later, Benjamin became an apprentice for his brother, James, a printer. It was at this time, that Benjamin really found his love for literature. He would read to no end, saving money to buy more, and more books. In fact, for a brief period, he became vegetarian, just so that he could afford more books. It wasn't long until he could write effortlessly. In 1721, Franklin created a weekly newspaper, the New England Courant. One year later, he wrote a series of about 14 essays called "Silence Dogood" where he talked about quite literally everything, and anything, to his readers. Everyone became convinced that only a scholarly, and witty writer could've written such essays, to Benjamin's utter delight. From a young age, Franklin was a big advocate of free speech, to James's disdain. After some quarrels with his brother, in an act of child-like rebellion and frustration, he ran away. Breaking his apprenticeship however, made him a fugitive.</p>
+    </div>
+  </div>
+</div>
+   
+
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img id="card1" src=https://s.wsj.net/public/resources/images/B3-BU411_bkrvfr_M_20180917161434.jpg>
+    </div>
+    <div class="flip-card-back">
+      
+      <p class="backtext">Philadelphia</p><br><br><br>
+      <p>From here, Benjamin Franklin's life got a little crazy. Franklin spent some time in Philadelphia, and instantly started making connections with a lot of people in the printing buisness. He also met his future wife, Deborah Reed. From here however, he then sailed to London, and started to work as a typesetter in a print shop. However, as anyone would, he got bored of London, and in 1726, moved back to Philadelphia. From here, he opened his own print, called the Pennsylvania Gazette. Franklin did a lot in Philadelphia, and when I say a lot, I mean a L-O-T. He made the very first entirely-volunteer firefighting company, and in 1743, joined the American Philosophical Society, and started getting deeply fascinated with science, electricity in specific. He studyed engineering, meteorology, and physics, just to name a few, and went on to organize the Pennsylvania military, and furthermore, founded the first hospital in the 13 Colonies. Because of his contributions to Philadelphia, it's an understatement to say that he was greatly appreciated by common folk, and governmental officials alike. 
+  </div>
+</div>
+
+</div>
+<br>
+
+<br>
+
+
+<br>
+
+
+
+
+
+</p></center>
+
+<br><br><br>
+<center>
+<h1>The Main Influence of Benjamin Franklin</h1></center>
+<p>
+
+In 1751, Franklin was elected to be the representative of the state of Pennsylvania in British Parliament, in London. He fostered many strong connections with British officials, and always advocated for America, during disputes between Britain, and the 13 Colonies. On July 10th, 1754, The Albany Congress was held, to discuss the strain of the French and Indian War. Here, Benjamin Franklin proposed the Albany Plan of Union, a plan to unite the 13 Colonies against the French and Native Americans, making the Colonies chance of victory far higher. However, this idea got shot down by both the British Government, and the seperate State Governments. That's not to say that it didn't lay the seed of unification in the colonists mind though. After the 7 year war, Franklin returned breifly to Philadelphia, only to return back to London in 1765, to testify the Stamp Act. He was in London for some time, until the battle at Lexington and Concord, which prompted his instant return to the colonies. <br>
+<br><br>
+In 1776, Benjamin Franklin was elected to be Pennsylvania's representative at the 2nd Continental Congress, a meeting held to discuss the 13 Colonies next phase of action amidst the revolution. Here, the management of the Continental Army was discussed, as well as talks of independence, that would later lead to the Decleration of Independence. Franklin was chosen to be the postmaster general, being in charge of the network of communication and transportation during the war. In 1776, he, and four others, featuring Jefferson, John Adams, Robert Livingston, and Rodger Sherman, were assigned to write the decleration of independence (although Benjamin Franklin didn't do a whole lot of the writing). On the 4th of July, the Decleration was signed, and Franklin was off to France for the next step. Rallying support.
+
+<br><br><br>
+
+Franklin made a whole lot of connections while he was in France. However, his charisma only got him so far. The French monarchs needed to first see that America had some glimmer of victory, before they stepped in. In 1777, during the Battle of Saratoga, the Continental Army succesfully surrendured the British army, giving France this proof. In 1778, the Alliance Treaty was signed, and led by Rochambeau and Jean-Baptiste, tons of French soldiers were deployed in the colonies, leading to the Continental army's deciding victory in the Battle of Yorktown in 1783, with Britain's surrender in the Treaty of Paris not long after. <br> <br><br>
+
+In 1785, Franklin left France and came back to the states, to represent Pennsylvania at the Constitutional Convention. He was in his early 80's. Here, the Articles of Confederation were ratified, and George Washington was elected as the 1st President of the United States. The foundation for American government was laid for generations to come, and Franklin had undoubtably done it service. In 1790, 20,000 people were in attendance celebrating the noble man that was Benjamin Franklin, at his funeral.
+
+
+
+
+
+
+
+</p>
+
+
+
+
+
+<h1><center>Benjamin Franklin's Impact</center></h1>
+
+
+
+
+<p>However, a lot of this is already well known. Sure he helped write the 1st Constitution, and the Decleration of Independence, and vastly imrpoved the post system across the US, but what else makes him as revered in American history as he is today? Who else did he affect besides generations of Americans to come? Well, the answer is-Slaves. Most of his life, Benjamin Franklin owned a couple slaves. From old records, historians identified that he owned around 7. Furthermore, he promoted "runaway slave" advertisements in the Pennsylvania Gazette. However, simaltaeneously, Franklin was also promoting Quaker pamphlets, that assumed a strong abolishionist stance. After the US Constituion was ratified, Franklin's stance as an abolitionist exponentiated, and in 1789, he wrote many, many essays seeking for the abolishment of slavery. In 1790, Franklin wrote a petition asking Congress to come up with a way to promote justice to the slaves, and abolish slavery completely. This petition was to little avail, and Franklin passed away before any change was instituted. However, Franklin will forever be recognized for his efforts to bring the horrible system of slavery, and the whole concept of racial superiority, to an end</p>
+
+
+<br><br><br>
+<h1>Furthermore, in his lifetime, Franklin innovated a variety of inventions. Some of which are:</h1>
+
+<ul>Swim Fins
+</ul>
+
+<ul>Urinary Catheter</ul>
+
+<ul>
+Lightning Rod
+</ul>
+
+
+<ul>Bifocals</ul>
+
+
+
+
+<h1><center>The Join or Die Snake</center></h1>
+<br><br>
+
+<center><img id="photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGZ_UCT__69nh-FlMbR21nsylTb_Y45f5SyQ&s"></center>
+
+<p>
+
+As established, during 1754, Franklin was the publisher of the Pennsylvania Gazette, and furthermore, the appointed the appointed delegate for the Albany Congress, a meeting where Connecticut, Maryland, Massachusetts, New York, New Hampshire, Pennsylvania and Rhode Island were going to meet, and discuss their worries regarding the war against the French and Indians. However, as the date for the congress approached, after military defeat on military defeat, Franklin started to get worried with the colonies odds, as they were. Franklin published an article about the most recent loss to the French based off of a report from a familiar face. George Washington. In his writing, Franklin stated<br><br><br>
+
+“The Confidence of the French in this Undertaking seems well-grounded on the present disunited State of the British Colonies, and the extreme Difficulty of bringing so many different Governments and Assemblies to agree in any speedy and effectual Measures for our common Defence and Security
+<br><br>
+They presume that they may with Impunity violate the most solemn Treaties subsisting between the two Crowns, kill, seize and imprison our Traders, and confiscate their Effects at Pleasure (as they have done for several Years past) murder and scalp our Farmers, with their Wives and Children, and take an easy Possession of such Parts of the British Territory as they find most convenient for them"
+
+<br><br><br>
+This vastly grotesque writing, with words like "scalp" and "murder" truly highlighted the merciless nature of the French, that Franklin wanted to convey, biased or not. It struck fear, and greater yet, it called for action. This very article was followed by the cartoon above, the infamous "Join or Die" snake. Each cut of the snake was 1/8 colonies, and it's power in its vile imagery really resonated with many, even with those who couldn't read at all. Unified, the colonies could act as a strong, mighty snake, one that could defeat France in its power. Apart, the colonies were just fractured pieces of a "greater thing". Following the publishing of this cartoon, Franklin went to the Albany Congress, and proposed his plan of union. A president general would be appointed by the British Government, and a representative would be elected by each of the colonies. While the Congress was all in favor of this plan, the British government feared the power of the colonies unified, and the individual colonies, still held their grudges against each other, proving this plan to little avail. However, this wasn't the last time the "Join or Die" snake would be seen. This cartoon radically calling for unification was published numerous times after the Stamp Act, the Revolutionary War, and certain iterations were used by both the North and South sides during the Civil War. Franklin's popularization of this now infamous cartoon, held its importance in times calling for unity, in generations to come.
+
+
+<br><br><br>
+<h1><center>George Washington's 1789 Letter to Benjamin Franklin</center></h1>
+<br><br><br>
+<p>
+"To Benjamin Franklin
+New York Septr 23d 1789.Dear Sir,
+The affectionate congratulations on the recovery of my health—and the warm expressions of personal friendship which were contained in your favor of the 16th instt,1 claim my gratitude. And the consideration that it was written when you were afflicted with a painful malady, greatly increases my obligation for it.
+
+Would to God, my dear Sir, that I could congratulate you upon the removal of that excruciating pain under which you labour! and that your existence might close with as much ease to yourself, as its continuance has been beneficial to our Country & useful to Mankind—or, if the united wishes of a free people, joined with the earnest prayers of every friend to science & humanity could relieve the body from pains or infirmities, you could claim an exemption on this score. But this cannot be, and you have within yourself the only resource to which we can confidently apply for relief—a philosophic mind.
+
+If to be venerated for benevolence—if to be admired for talent—if to be esteemed for patriotism—if to be beloved for philanthropy can gratify the human mind, you must have the pleasing consolation to know that you have not lived in vain; and I flatter my self that it will not be ranked among the least grateful occurrences of your life to be assured that so long as I retain my memory—you will be thought on with respect, veneration and affection by Dear Sir Your sincere friend and obedient Hble Servant
+
+Go: Washington"
+<br><br><br>
+
+
+<p>This letter, as shown, was written by old man George Washington, to Benjamin Franklin, one year before Franklin's later passing. Washington and Franklin were strong friends, and this letter serves as a primary source, to really comprehend the impact that Benjamin Franklin imprinted on others. In the first paragraph, Washington first shows grattitude for Franklin's concern pertaining to Washington's health. At that moment, Washington had recently recovered from a massive tumor in his left thigh, which spiralled to great lengths and gave him a long term fever. Not long before this letter, another letter was sent by Franklin to Washington, in which Franklin expressed kind words about Washington's recovery process, and also informed Washington as to his value of their friendship. What's especially more defining about Franklin's actions though, is that he himself was struggling with a bad case of gout, and bladder stones (which is why he invented the urinary Catheter). Washington then goes on to talk about the sheer impact Franklin has had on others, talking about how Franklin should relish in comfort, from his contributions to humanity, and America. In the last paragraph, Washington brings up Franklins sheer benevolence, his genius and talent, his patriotism, and his philanthropic nature, and how Franklin can sign off, knowing that he lived a life, purposeful to others. This kind of praise from just anyone means an unimaginable deal, but coming from George Washington? The first President of the United States? To say it emphasizes the good natured life that Benjamin Franklin lived, is an understatement. 
+
+
+
+
+
+
+</p>
+
+
+  
+</p>
+
+</p>
+
+</body>
 </html>
